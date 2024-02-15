@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #f24f04;
+    --text-color: #252429;
+    --bg-color: #fffefb;
+    --rr-color: #ffa50a;
+    --other-color: #95949a;
+    --bb-color: #fff2de;
+
+    --big-font: 4.4rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+
+}
+
+.wrap{
+     width: 100%;
+     overflow: hidden;
+}
+
+.wrap .con{
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 20px;
+}
+.category-filter{
+    margin-top: 40px;
+}
+
+.titre{
+    margin-bottom: 40px;
+}
+
+.titre h1{
+    color: #1b1919;
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+
+.filter-btns{
+    text-align: center;
+}
+
+.filter-btn{
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    color: #d3d3d3;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.filter-btn::after{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: #555;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover{
+    color: #555;
+}
+
+.filter-btn:hover::after{
+    width: 100%;
+}
+
+.active-btn{
+    color: #555;
+}
+
+.active-btn::after{
+    width: 100%;
+}
+
+
+
+
+.filter-items{
+    margin-top: 40px;
+}
+
+.item-img{
+    position: relative;
+    overflow: hidden;
+}
+
+.item-img::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(212, 203, 203, 0.1);
+}
+
+.item-img .discount{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: #95bf47;
+    z-index: 1;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 16px;
+}
+
+
+.item-img img{
+    width: 100%;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.filter-item:hover .item-img img{
+    transform: scale(1.1);
+}
+
+.item-info{
+    padding: 14px 0;
+}
+
+.item-info p{
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+.item-info .old-price{
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.item-info .new-price{
+    display: inline-block;
+    margin-left: 6px;
+    font-weight: 600;
+    color: #f53939;
+}
+
+.add-btn{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #95bf47;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 2px;
+    border: 2px solid #95bf47;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-btn:hover{
+    border-color: #95bf47;
+    background-color: #fff;
+    color: #95bf47;
+}
+
+.filter-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filter-item{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px){
+    .filter-item{
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .filter-item{
+        width: calc(33.3333% - 30px);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .filter-item{
+        width: calc(25% - 30px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+    background: #242526;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+.main-contact h3 {
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+    color: var(--bg-color);
+}
+
+.main-contact h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.icons {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.icons i {
+    font-size: 25px;
+    margin-right: 1rem;
+    color: #555;
+    transition: all .35s ease;
+}
+
+.icons i:hover {
+    color: var(--bg-color);
+    transform: scale(1.1) translateY(-5px);
+}
+
+
+.main-contact li {
+    margin-bottom: 15px;
+}
+
+.main-contact li a {
+    display: block;
+    color: #555;
+    font-size: var(--other-color);
+    font-weight: 600;
+    transition: all .35s ease;
+}
+
+.main-contact li a:hover {
+    transform: translateX(-8px);
+    color: var(--bg-color);
+}
